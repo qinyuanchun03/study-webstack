@@ -1,0 +1,36 @@
+name: 自动部署
+
+on:
+  push:
+    branches:
+      - code  # 触发工作流的分支
+  workflow_dispatch:  # 允许手动触发工作流
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取所有提交历史
+          ref: code  # 指定要检出的分支
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3  # 使用 actions-hugo 的最新版本
+        with:
+          hugo-version: 'latest'
+          extended: true # 启用 Hugo extended 版本，支持 SCSS/SASS
+
+      - name: Build Hugo
+        run: hugo
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4  # 使用 actions-gh-pages 的最新版本
+        with:
+          personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}  # 确保这里使用了正确的 Secret 名称
+          publish_dir: ./public
+          publish_branch: main  # 部署的目标分支
+          force_orphan: true # 强制创建孤儿分支
+          commit_message: "Deploy Hugo blog from code branch" # 自定义提交信息
