@@ -1,0 +1,303 @@
+- taxonomy: 国际学术期刊
+  icon: fas fa-globe-europe fa-lg
+  links:
+  - title: Nature
+    logo: Nature.png
+    url: https://www.nature.com/
+    description: 世界顶级综合性科学期刊，涵盖自然科学各领域
+  - title: Science
+    logo: Science.png # Changed from fas fa-microscope for consistency with Nature
+    url: https://www.science.org/
+    description: 美国科学促进会出版的世界顶级综合性科学期刊
+  - title: Cell
+    logo: Cell.png
+    url: https://www.cell.com/
+    description: 顶级生命科学期刊，发表细胞生物学等领域重大发现
+  - title: The Lancet
+    logo: The_Lancet.png
+    url: https://www.thelancet.com/
+    description: 世界顶级医学期刊之一，发表临床医学重要研究
+  - title: PNAS
+    logo: PNAS.png # Changed from fas fa-atom
+    url: https://www.pnas.org/
+    description: 美国国家科学院院刊，发表高影响力原创研究
+  - title: IEEE Xplore
+    logo: IEEE_Xplore.png # Changed from fas fa-bolt
+    url: https://ieeexplore.ieee.org/
+    description: 电气电子工程师学会的数字图书馆，包含高质量技术文献
+  - title: ACM Digital Library
+    logo: ACM_Digital_Library.png # Changed from fas fa-laptop-code
+    url: https://dl.acm.org/
+    description: 计算机协会的数字图书馆，计算机科学领域重要资源
+  - title: SpringerLink
+    logo: SpringerLink.png
+    url: https://link.springer.com/
+    description: 斯普林格出版社的在线平台，提供期刊、图书和参考著作
+  - title: ScienceDirect (Elsevier)
+    logo: ScienceDirect.png
+    url: https://www.sciencedirect.com/
+    description: 爱思唯尔旗下的领先科学、技术和医学文献平台
+
+- taxonomy: 中国优质学术期刊
+  icon: fas fa-book-open fa-lg
+  links:
+  - title: 中国科学系列
+    logo: 中国科学.ico
+    url: https://www.sciengine.com/
+    description: 中国科学院主办的综合性科学期刊，分为多个系列 (如数学、化学、生命科学、地球科学、技术科学、信息科学)
+  - title: 科学通报 (Chinese Science Bulletin)
+    logo: 科学通报.ico
+    url: https://www.sciengine.com/CSB/home
+    description: 中国自然科学领域综合性学术期刊，报道最新重要研究成果
+  - title: 计算机学报
+    logo: 计算机学报.jpg
+    url: https://cjc.ict.ac.cn/ # Corrected to https, it redirects
+    description: 中国计算机学会主办的计算机科学领域权威期刊
+  - title: 自动化学报
+    logo: 自动化学报.ico
+    url: https://www.aas.net.cn/ # Corrected to https, it redirects
+    description: 中国自动化学会会刊，自动化领域重要期刊
+  - title: 知网 (CNKI)
+    logo: CNKI.png
+    url: https://www.cnki.net/
+    description: 中国知网，全球领先的数字出版平台，提供中文学术文献资源
+  - title: 万方数据
+    logo: WanfangData.png
+    url: https://www.wanfangdata.com.cn/
+    description: 中国专业的学术信息资源服务平台，收录期刊、学位论文、会议论文等
+
+- taxonomy: AI研究工具
+  icon: fas fa-robot fa-lg
+  links:
+  - title: Elicit
+    logo: Elicit.png
+    url: https://elicit.org/
+    description: AI研究助手，帮助查找相关论文和总结研究发现
+  - title: Semantic Scholar
+    logo: Semantic_Scholar.ico
+    url: https://www.semanticscholar.org/
+    description: AI驱动的学术搜索引擎，提供论文推荐和影响力分析
+  - title: Connected Papers
+    logo: Connected_Papers.ico
+    url: https://www.connectedpapers.com/
+    description: 可视化论文关系网络，发现相关研究
+  - title: Papers with Code
+    logo: Papers_with_Code.png
+    url: https://paperswithcode.com/
+    description: 整合机器学习论文、代码和评估指标的社区平台
+  - title: Hugging Face
+    logo: Hugging_Face.png
+    url: https://huggingface.co/
+    description: AI社区，提供模型、数据集和工具，推动开源机器学习
+  - title: Scholarcy
+    logo: Scholarcy.png # Changed from fas fa-file-alt
+    url: https://www.scholarcy.com/
+    description: 使用AI快速总结学术论文的关键发现
+  - title: Writefull
+    logo: Writefull.ico
+    url: https://www.writefull.com/
+    description: 基于AI的学术写作助手，提供语言改进建议
+  - title: Scite.ai
+    logo: Scite_ai.png # Changed from fas fa-quote-right
+    url: https://scite.ai/
+    description: 分析论文引用情况，了解支持或反驳的证据
+
+- taxonomy: 论文AIGC检查工具
+  icon: fas fa-shield-alt fa-lg
+  links:
+  - title: Turnitin
+    logo: Turnitin.ico
+    url: https://www.turnitin.com/
+    description: 全球领先的学术诚信解决方案，检测抄袭和AI生成内容
+  - title: GPTZero
+    logo: GPTZero.ico
+    url: https://gptzero.me/
+    description: 专门用于检测AI生成文本的工具
+  - title: Copyleaks
+    logo: Copyleaks.png
+    url: https://copyleaks.com/
+    description: 使用AI技术检测抄袭和AI生成内容
+  - title: Winston AI
+    logo: Winston_AI.png
+    url: https://gowinston.ai/
+    description: 专业的AI内容检测工具，适用于学术和出版领域
+  - title: Originality.ai
+    logo: Originality_ai.png
+    url: https://originality.ai/
+    description: 结合抄袭检测和AI内容识别的综合工具
+
+- taxonomy: 数字图书馆与资源库
+  icon: fas fa-book-reader fa-lg
+  links:
+  - title: Google Scholar
+    logo: Google_Scholar.png
+    url: https://scholar.google.com/
+    description: 谷歌学术搜索，广泛收录全球学术文献的搜索引擎
+  - title: arXiv
+    logo: arXiv.ico
+    url: https://arxiv.org/
+    description: 康奈尔大学运营的预印本存储库，涵盖物理、数学、计算机科学等领域
+  - title: PubMed Central (PMC)
+    logo: PubMed_Central.png # PubMed is the search interface, PMC is the archive
+    url: https://www.ncbi.nlm.nih.gov/pmc/
+    description: 美国国立卫生研究院维护的免费全文生物医学和生命科学文献档案库
+  - title: JSTOR
+    logo: JSTOR.png
+    url: https://www.jstor.org/
+    description: 数字图书馆，提供学术期刊、书籍和一手资料
+  - title: CORE
+    logo: CORE.png
+    url: https://core.ac.uk/
+    description: 聚合全球开放获取研究论文的平台
+  - title: Internet Archive Scholar
+    logo: Internet_Archive_Scholar.png
+    url: https://scholar.archive.org/
+    description: 互联网档案馆的学术文献保存和搜索服务
+  - title: Sci-Hub
+    logo: SciHub.ico
+    url: https://sci-hub.se/ # URL may change, this is a common one
+    description: 开放获取科学论文的网站 (注意：使用风险自负)
+  - title: Z-Library
+    logo: Z-Library.png
+    url: https://zlibrary-global.se/ # This is an entry point to find working domains
+    description: 世界上最大的电子书和文章库 (注意：使用风险自负)
+  - title: Library Genesis (LibGen)
+    logo: Library_Genesis.ico
+    url: https://libgen.is/ # URL may change, this is a common one
+    description: 提供免费访问数百万书籍和学术文章的资源库 (注意：使用风险自负)
+
+- taxonomy: 优质学术与AI博客
+  icon: fas fa-feather-alt fa-lg
+  links:
+  - title: Distill
+    logo: Distill.ico
+    url: https://distill.pub/
+    description: 机器学习研究的交互式、可视化期刊
+  - title: Google AI Blog
+    logo: Google_AI_Blog.ico
+    url: https://ai.googleblog.com/ # Corrected, now redirects to https://deepmind.google/discover/blog/
+    description: Google DeepMind研究团队的官方博客
+  - title: OpenAI Blog
+    logo: OpenAI.png # Changed from fas fa-robot
+    url: https://openai.com/blog/
+    description: OpenAI研究团队的官方博客，发布最新AI研究进展
+  - title: BAIR Blog (Berkeley AI Research)
+    logo: BAIR_Blog.png
+    url: https://bair.berkeley.edu/blog/
+    description: 伯克利人工智能研究实验室的博客，分享AI前沿研究
+  - title: MIT Technology Review
+    logo: MIT_Technology_Review.ico
+    url: https://www.technologyreview.com/
+    description: 麻省理工学院的技术评论杂志，报道前沿科技研究
+  - title: The Gradient
+    logo: The_Gradient.png
+    url: https://thegradient.pub/
+    description: 由AI研究人员创办的数字出版物，关注AI研究和影响
+  - title: Andrew Ng (DeepLearning.AI Blog)
+    logo: Andrew_Ng.png # Changed from fas fa-brain; using deeplearning.ai blog as it's more active
+    url: https://www.deeplearning.ai/blog/
+    description: AI领域知名学者Andrew Ng及其团队在DeepLearning.AI的博客
+
+- taxonomy: 知名技术博主与团队
+  icon: fas fa-chalkboard-teacher fa-lg
+  links:
+  - title: 阮一峰的网络日志
+    logo: 阮一峰的网络日志.ico
+    url: https://www.ruanyifeng.com/blog/
+    description: 中国知名技术博主，擅长将复杂技术概念简单化，涵盖前端、JavaScript、Web技术等
+  - title: 酷壳 - CoolShell
+    logo: 酷壳_-_CoolShell.png
+    url: https://coolshell.cn/
+    description: 陈皓（左耳朵耗子）创建的技术博客，深入剖析技术本质，涵盖编程语言、系统架构等
+  - title: 廖雪峰的官方网站
+    logo: 廖雪峰的官方网站.ico
+    url: https://www.liaoxuefeng.com/
+    description: 提供Python、Java、JavaScript、Git等技术教程，通俗易懂
+  - title: 张鑫旭的个人主页
+    logo: 张鑫旭的个人主页.ico
+    url: https://www.zhangxinxu.com/
+    description: 专注于Web前端偏前领域，CSS、HTML、JavaScript等
+  - title: 美团技术团队
+    logo: 美团技术团队.png
+    url: https://tech.meituan.com/
+    description: 美团点评技术团队的博客，分享技术经验和架构实践
+  - title: 阿里技术
+    logo: 阿里技术.png
+    url: https://developer.aliyun.com/group/aliyuntech
+    description: 阿里巴巴集团技术团队的官方博客和社区
+  - title: 腾讯技术工程
+    logo: 腾讯技术工程.png
+    url: https://careers.tencent.com/tencentfullstack.html # More of a portal, also see https://cloud.tencent.com/developer/column/
+    description: 腾讯技术团队分享平台，涵盖各类技术实践
+  - title: 云风的BLOG
+    logo: 云风的BLOG.ico
+    url: https://blog.codingnow.com/
+    description: 游戏开发者云风的个人博客，关注编程语言、游戏开发等
+  - title: Jeff Atwood (Coding Horror)
+    logo: Jeff_Atwood__Coding_Horror_.png
+    url: https://blog.codinghorror.com/
+    description: Stack Overflow联合创始人的博客，讨论软件开发、编程文化等
+  - title: Joel on Software
+    logo: Joel_on_Software.ico
+    url: https://www.joelonsoftware.com/
+    description: Stack Overflow联合创始人Joel Spolsky的博客，软件开发和管理
+  - title: Paul Graham Essays
+    logo: Paul_Graham_Essays.ico
+    url: https://www.paulgraham.com/articles.html # Corrected to https
+    description: Y Combinator创始人的文章集，涵盖创业、编程和技术思考
+  - title: Scott Hanselman's Blog
+    logo: Scott_Hanselman_s_Blog.ico
+    url: https://www.hanselman.com/blog/
+    description: 微软工程师的技术博客，涵盖.NET、开源和Web开发
+  - title: Martin Fowler
+    logo: Martin_Fowler.png
+    url: https://martinfowler.com/
+    description: 软件设计大师，关于重构、微服务、敏捷开发等领域的权威声音
+
+- taxonomy: 内容整合与文献管理工具
+  icon: fas fa-puzzle-piece fa-lg
+  links:
+  - title: Google NotebookLM
+    logo: Google_NotebookLM.ico
+    url: https://notebooklm.google.com/
+    description: 谷歌推出的AI驱动笔记工具，可以整合和分析多种来源的内容，帮助研究和写作
+  - title: Notion (with AI)
+    logo: Notion_AI.ico
+    url: https://www.notion.so/product/ai
+    description: 集成AI功能的笔记和知识管理平台，可以总结、改写和生成内容
+  - title: Obsidian
+    logo: Obsidian.ico
+    url: https://obsidian.md/
+    description: 基于本地Markdown文件的知识库工具，支持双向链接和图谱可视化
+  - title: Roam Research
+    logo: Roam_Research.ico
+    url: https://roamresearch.com/
+    description: 双向链接笔记工具，适合构建知识网络和思维导图
+  - title: Perplexity AI
+    logo: Perplexity_AI.ico
+    url: https://www.perplexity.ai/
+    description: AI驱动的研究助手，可以整合多种来源的信息回答复杂问题
+  - title: Mem.ai
+    logo: Mem_ai.ico
+    url: https://mem.ai/
+    description: AI驱动的个人知识管理工具，自动组织和连接笔记内容
+  - title: Readwise Reader
+    logo: Readwise_Reader.png
+    url: https://readwise.io/reader
+    description: 集成阅读、标注和知识管理的工具，可以整合多种来源的内容
+  - title: Zotero
+    logo: Zotero.ico
+    url: https://www.zotero.org/
+    description: 开源文献管理工具，可以收集、组织、引用和分享研究资料
+  - title: Mendeley
+    logo: Mendeley.png
+    url: https://www.mendeley.com/
+    description: 免费的文献管理工具和学术社交网络平台
+  - title: Elicit
+    logo: Elicit.png # Already listed under AI Research Tools, useful here too
+    url: https://elicit.org/
+    description: 专为研究人员设计的AI工具，可以帮助查找和分析学术论文，辅助文献综述
+  - title: Lex
+    logo: Lex.ico
+    url: https://lex.page/
+    description: AI辅助写作工具，帮助创作者更高效地撰写和编辑内容

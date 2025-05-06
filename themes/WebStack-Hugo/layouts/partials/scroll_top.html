@@ -1,0 +1,64 @@
+<div id="scroll-to-top" class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<style>
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 767.98px) {
+    .scroll-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+</style>
+
+<script>
+// Scroll to top functionality
+$(document).ready(function() {
+    var scrollToTopBtn = $('#scroll-to-top');
+    
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+            scrollToTopBtn.addClass('show');
+        } else {
+            scrollToTopBtn.removeClass('show');
+        }
+    });
+    
+    scrollToTopBtn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: 0}, 500);
+    });
+});
+</script>

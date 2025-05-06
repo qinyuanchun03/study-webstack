@@ -1,0 +1,77 @@
+/* 
+ * Optimized Font Awesome loading from CDN
+ * Only includes necessary icons
+ */
+
+/* Load Font Awesome from CDN */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css');
+
+/* 本地备份 - 当CDN不可用时使用 */
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('../fontawesome-slim/webfonts/fa-brands-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('../fontawesome-slim/webfonts/fa-regular-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url('../fontawesome-slim/webfonts/fa-solid-900.woff2') format('woff2');
+}
+
+/* 确保这些特定图标可用 */
+.fa, .fas, .far, .fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.fab {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400;
+}
+
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+}
+
+/* 确保关键图标定义 */
+.fa-arrow-up:before {
+  content: "\f062";
+}
+
+.fa-file-upload:before {
+  content: "\f574";
+}
+
+.fa-staylinked:before {
+  content: "\f3f5";
+}
+
+.fa-info-circle:before {
+  content: "\f05a";
+}

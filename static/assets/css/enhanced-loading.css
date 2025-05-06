@@ -1,0 +1,295 @@
+/*
+ * Enhanced Loading Animation
+ * 改进的加载动画样式
+ */
+
+/* 加载动画容器 */
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #ffffff;
+  transition: opacity 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* 暗色模式下的加载背景 */
+.io-black-mode #loading {
+  background-color: #1a1c20;
+}
+
+/* 加载动画关闭时的样式 */
+#loading.close {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 加载动画背景效果 */
+#loading:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(58, 123, 213, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
+  animation: pulse-bg 8s infinite ease-in-out;
+  z-index: -1;
+}
+
+/* 暗色模式下的背景效果 */
+.io-black-mode #loading:before {
+  background: radial-gradient(circle, rgba(108, 92, 231, 0.05) 0%, rgba(26, 28, 32, 0) 70%);
+}
+
+/* 加载动画内容 */
+.loading-content {
+  text-align: center;
+  padding: 30px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(0);
+  animation: float 3s infinite ease-in-out;
+}
+
+/* 暗色模式下的加载内容 */
+.io-black-mode .loading-content {
+  background-color: rgba(42, 44, 48, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* 加载进度条容器 */
+.loading-progress {
+  width: 240px;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  margin: 25px auto;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 暗色模式下的进度条背景 */
+.io-black-mode .loading-progress {
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* 加载进度条内部填充 */
+.loading-inner {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #3a7bd5, #6c5ce7, #3a7bd5);
+  background-size: 200% 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease-out;
+  animation: gradient-shift 2s infinite linear;
+  box-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
+}
+
+/* 暗色模式下的进度条填充 */
+.io-black-mode .loading-inner {
+  box-shadow: 0 0 15px rgba(108, 92, 231, 0.7);
+}
+
+/* 加载动画图标 */
+.loading-icon {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+}
+
+/* 加载动画旋转圆环 - 外层 */
+.loading-icon:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgba(0, 0, 0, 0.05);
+  border-top-color: #3a7bd5;
+  border-right-color: #6c5ce7;
+  border-radius: 50%;
+  animation: spin 1.5s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* 加载动画旋转圆环 - 内层 */
+.loading-icon:after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  border: 3px solid rgba(0, 0, 0, 0.05);
+  border-top-color: #6c5ce7;
+  border-left-color: #3a7bd5;
+  border-radius: 50%;
+  animation: spin-reverse 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* 暗色模式下的旋转圆环 - 外层 */
+.io-black-mode .loading-icon:before {
+  border-color: rgba(255, 255, 255, 0.05);
+  border-top-color: #6c5ce7;
+  border-right-color: #3a7bd5;
+}
+
+/* 暗色模式下的旋转圆环 - 内层 */
+.io-black-mode .loading-icon:after {
+  border-color: rgba(255, 255, 255, 0.05);
+  border-top-color: #3a7bd5;
+  border-left-color: #6c5ce7;
+}
+
+/* 加载文字 */
+.loading-text {
+  font-size: 18px;
+  margin-top: 15px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #3a7bd5, #6c5ce7);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-gradient 2s infinite linear;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 暗色模式下的加载文字 */
+.io-black-mode .loading-text {
+  background: linear-gradient(90deg, #5a9be5, #8c7cf7);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* 旋转动画 */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 反向旋转动画 */
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* 脉冲动画 */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* 背景脉冲动画 */
+@keyframes pulse-bg {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+}
+
+/* 文本渐变动画 */
+@keyframes text-gradient {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* 进度条渐变动画 */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
+/* 浮动动画 */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 懒加载图片的占位样式 */
+.lazy-image {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lazy-image.lazyloaded {
+  opacity: 1;
+}
+
+/* 图片加载时的占位符 */
+.img-placeholder {
+  background-color: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.io-black-mode .img-placeholder {
+  background-color: #2a2c30;
+}
+
+/* 占位符闪烁动画 */
+.img-placeholder:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+.io-black-mode .img-placeholder:after {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+}
+
+/* 闪烁动画 */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

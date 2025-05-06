@@ -1,0 +1,61 @@
+baseURL               = "https://bioit.top/"
+languageCode          = "zh-CN"
+title                 = "江湖笔者学术资源聚合"
+theme                 = "WebStack-Hugo"
+preserveTaxonomyNames = true
+disablePathToLower    = true
+hasCJKLanguage        = true
+publishDir            = "public"				# 站点静态文件保存目录
+
+
+[params]
+    author        = "shenweiyan"
+    description   = "江湖笔者学术资源聚合 | 学术研究资源导航"
+    upload        = "#"      # 左侧导航栏的"网站提交"
+    about         = "#"	     # 左侧导航栏的"关于导航"页面(./about)
+    repository    = "#"
+    enablePreLoad = true					# 网站完全打开前预加载动画
+    textPreLoad   = "学术研究，就用笔者站点"				# 预加载的动画文字, 只有当enablePreLoad=true时生效
+    expandSidebar = false					# 默认展开左侧边导航栏
+    logosPath     = "assets/images/logos"			# 网站每个导航地址logo存放地址
+    defaultLogo   = "assets/images/logos/default.png"		# logo图片资源不存在或者错误时, 默认显示的logo; 该参数如为空,将会一直加载对应的logo,直至成功
+    nightMode     = false					# 默认站点为深色(夜间)模式
+    yiyan         = true                         		# 默认启用一言服务
+    fancybox      = true                                        # 使用 Fancybox 实现图片灯箱/放大功能
+
+[params.seo]
+    baiduhmid       = 'efccc04cb44fc49faddac5876180b369'	# 百度统计 hm.src 的 ID
+    baiduSiteVer    = 'codeva-cCAOSG8MBO'			# 百度HTML标签验证(baidu-site-verification)
+    tj51laid        = ''                        		# 51.LA 网站统计
+    tj51lack        = ''
+    GoogleAdsClient = ''					# Google AdSense
+
+[params.qweather]
+    key = "085791e805a24491b43b06cf58ab31e7"
+
+[params.images]
+    favicon           = "assets/images/bi-favicon.png"
+    searchImageL      = "assets/images/bg-dna.jpg"		# 搜索部分浅色背景图
+    searchImageD      = "assets/images/bg-dna.jpg"		# 搜索部分深色背景图
+    logoExpandLight   = "assets/images/bi-expand-dark.png"
+    logoExpandDark    = "assets/images/bi-expand-light.png"
+    logoCollapseLight = "assets/images/bi.png"
+    logoCollapseDark  = "assets/images/bi.png"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+
+[params.footer]
+    copyright = '本站内容源自互联网，仅供学术研究使用，如有内容侵犯了你的权益，请联系删除相关内容 <br/>&copy; 2023 - {year} By 江湖笔者学术资源聚合<br/>'

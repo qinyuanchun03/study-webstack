@@ -1,0 +1,21 @@
+- item: 首页
+  icon: fa fa-home
+  link: "./"
+
+- item: 说明文档
+  icon: fa fa-link
+  link: ""
+  list:
+    - name: 本站说明
+      url: "./about/"
+    - name: AI资源汇总
+      url: "./otherai/"
+
+
+- item: 项目地址
+  icon: fab fa-github
+  link: https://github.com/qinyuanchun03/study-webstack
+
+- item: 作者的小红书
+  icon: fas fa-heart
+  link: https://www.xiaohongshu.com/user/profile/66e4de9c000000001d022a5b

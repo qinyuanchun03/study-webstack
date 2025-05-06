@@ -1,0 +1,159 @@
+/* 分类增强样式 */
+
+/* 分类标题样式 */
+.category-header {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(241, 64, 75, 0.1);
+}
+
+.category-header:after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+/* 分类图标样式 */
+.category-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  border-radius: 8px;
+  background-color: rgba(241, 64, 75, 0.1);
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.category-header:hover .category-icon {
+  background-color: var(--primary-color);
+  color: white;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+/* 分类卡片网格布局优化 */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 767.98px) {
+  .category-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .category-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px;
+  }
+}
+
+/* 分类卡片样式 */
+.category-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, border-left 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--card-bg);
+}
+
+.category-card:hover {
+  box-shadow: 0 3px 12px rgba(241, 64, 75, 0.15);
+  border-left: 3px solid var(--primary-color);
+  transition: box-shadow 0.2s ease-out, border-left 0.2s ease-out;
+}
+
+.category-card-header {
+  padding: 15px;
+  background-color: rgba(241, 64, 75, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.category-card-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.category-card-body {
+  padding: 15px;
+}
+
+.category-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-card-item {
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.05);
+}
+
+.category-card-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.category-card-link {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.category-card-link:hover {
+  color: var(--primary-color);
+}
+
+.category-card-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.category-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 暗黑模式适配 */
+.io-black-mode .category-header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.io-black-mode .category-icon {
+  background-color: rgba(241, 64, 75, 0.2);
+}
+
+.io-black-mode .category-card {
+  background-color: var(--card-bg);
+}
+
+.io-black-mode .category-card-header {
+  background-color: rgba(241, 64, 75, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+.io-black-mode .category-card-item {
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
