@@ -29,7 +29,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4  # 使用 actions-gh-pages 的最新版本
         with:
-          personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}  # 确保这里使用了正确的 Secret 名称
+          personal_token: ${{ secrets.BLOG_KEY }}  # 确保这里使用了正确的 Secret 名称
           publish_dir: ./public
           publish_branch: main  # 部署的目标分支
           force_orphan: true # 强制创建孤儿分支
