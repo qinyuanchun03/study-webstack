@@ -1,0 +1,202 @@
+/* 
+ * Enhanced Background Styles for WebStack-Hugo Theme
+ * 深度优化网站背景和视觉效果
+ */
+
+/* 全局变量定义 - 更现代的配色方案 */
+:root {
+  /* 主色调 - 科技蓝色系 */
+  --primary-color: #3a7bd5;
+  --primary-light: #5a9be5;
+  --primary-dark: #2a5bb5;
+  
+  /* 强调色 - 适合学术网站的深紫色 */
+  --accent-color: #6c5ce7;
+  --accent-light: #8c7cf7;
+  --accent-dark: #4c3cd7;
+  
+  /* 背景色 */
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+  
+  /* 暗色模式 */
+  --dark-bg: #1a1c20;
+  --dark-card: #2a2c30;
+  --dark-text: #e4e6eb;
+  
+  /* 阴影效果 */
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  
+  /* 渐变背景 */
+  --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  --gradient-dark: linear-gradient(135deg, #2d3436 0%, #1a1c20 100%);
+  
+  /* 动画过渡 */
+  --transition-normal: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* 背景优化 */
+body {
+  background-color: var(--bg-color);
+  transition: var(--transition-normal);
+}
+
+/* 顶部横幅背景优化 */
+.big-header-banner {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 创建动态背景效果 */
+.big-header-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  opacity: 0.95;
+  z-index: -2;
+}
+
+/* 添加背景图案 */
+.big-header-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../images/bg-dna.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: -1;
+  animation: slowZoom 30s infinite alternate;
+}
+
+/* 背景缓慢缩放动画 */
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* 搜索区域背景优化 */
+.header-big {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 70px;
+  z-index: 1;
+}
+
+/* 搜索框美化 */
+.header-big .search-group {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: var(--transition-normal);
+}
+
+.header-big .search-group:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.header-big #search-text {
+  color: #fff;
+  font-weight: 500;
+}
+
+.header-big #search-text::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* 卡片优化 */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition-normal);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
+
+/* 卡片内容优化 */
+.url-card .url-body .card .card-body {
+  padding: 1.25rem;
+}
+
+.url-card .url-body .card .url-content .url-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: var(--transition-normal);
+}
+
+.url-card:hover .url-body .card .url-content .url-img {
+  transform: scale(1.05);
+}
+
+/* 暗色模式优化 */
+.io-black-mode {
+  --bg-color: var(--dark-bg);
+  --card-bg: var(--dark-card);
+  color: var(--dark-text);
+}
+
+.io-black-mode .big-header-banner::before {
+  background: var(--gradient-dark);
+}
+
+.io-black-mode .card {
+  background-color: var(--dark-card);
+}
+
+/* 滚动到顶部按钮美化 */
+.to-top {
+  border-radius: 50%;
+  background: var(--primary-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: var(--transition-bounce);
+}
+
+.to-top:hover {
+  background: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+/* 导航菜单优化 */
+.sidebar-menu-inner ul li a {
+  border-radius: 8px;
+  transition: var(--transition-normal);
+}
+
+.sidebar-menu-inner ul li a:hover {
+  background-color: rgba(58, 123, 213, 0.1);
+  transform: translateX(5px);
+}
+
+/* 移动端优化 */
+@media (max-width: 767.98px) {
+  .big-header-banner::after {
+    opacity: 0.2;
+  }
+  
+  .header-big {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+}

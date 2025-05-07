@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 江湖笔者学术资源聚合</title>
+    <link>https://jh-acadpaper.250221.xyz/tags/</link>
+    <description>Recent content in Tags on 江湖笔者学术资源聚合</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 05 May 2023 12:00:00 +0800</lastBuildDate>
+    <atom:link href="https://jh-acadpaper.250221.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>https://jh-acadpaper.250221.xyz/tags/Hugo/</link>
+      <pubDate>Fri, 05 May 2023 12:00:00 +0800</pubDate>
+      <guid>https://jh-acadpaper.250221.xyz/tags/Hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>https://jh-acadpaper.250221.xyz/tags/Markdown/</link>
+      <pubDate>Fri, 05 May 2023 12:00:00 +0800</pubDate>
+      <guid>https://jh-acadpaper.250221.xyz/tags/Markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>代码高亮</title>
+      <link>https://jh-acadpaper.250221.xyz/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/</link>
+      <pubDate>Fri, 05 May 2023 12:00:00 +0800</pubDate>
+      <guid>https://jh-acadpaper.250221.xyz/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

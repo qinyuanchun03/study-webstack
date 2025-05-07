@@ -1,0 +1,1456 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="/css/bootstrap.css?version=1.0">
+<link rel="stylesheet" href="/css/common.css?version=1.1">
+<link rel="stylesheet" type="text/css" href="/css/owl.carousel.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/owl.theme.default.min.css" />
+<link rel="dns-prefetch" href="https://cdn.bootcss.com"/>
+<link rel="dns-prefetch" href="https://cdn.mathjax.org"/>
+<link rel="stylesheet" href="/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<link rel="stylesheet" href="/css/base.css?version=1.6">
+<link rel="stylesheet" href="/css/style.css?version=1.3">
+<link rel="stylesheet" href="/css/index1.css?version=1.6">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	showProcessingMessages: false, //关闭js加载过程信息
+    messageStyle: "none", //不显示信息
+	tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] , displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes: true},
+	menuSettings: {
+		zoom: "None",        //  when to do MathZoom
+		CTRL: false,         //    require CTRL for MathZoom?
+		ALT: false,          //    require Alt or Option?
+		CMD: false,          //    require CMD?
+		Shift: false,        //    require Shift?
+		zscale: "150%",      //  the scaling factor for MathZoom
+		font: "Auto",        //  what font HTML-CSS should use
+		context: "MathJax",  //  or "Browser" for pass-through to browser menu
+		mpContext: false,    //  true means pass menu events to MathPlayer in IE
+		mpMouse: false,      //  true means pass mouse events to MathPlayer in IE
+		texHints: true,      //  include class names for TeXAtom elements
+		semantics: false     //  add semantics tag with original form in MathML output
+	},
+	TeX: {
+		Macros: {
+			dag: ["\\dagger"],
+			uppi:["\\pi"],
+			emph:["\\textit{}"]
+		}
+	}
+});
+
+
+</script>
+<style>
+    .MathJax{outline:0;}
+</style>
+<!-- changeToLocalImport
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+ -->
+<script async="" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="/js/html5.js"></script>
+<script type="text/javascript" src="/js/respond.js"></script>
+<script type="text/javascript" src="/js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="/js/index.js?version=1.3.6"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/common.js?version=1.3"></script>
+<script src="/js/owl.carousel.min.js" type="text/javascript"></script>
+
+<!-- ueditor编辑器 add gaol -->
+<script src="/js/ueditor/ueditor.config.js?version=0.3" type="text/javascript"></script>
+<script src="/js/ueditor/ueditor.all.min.js?version=0.1" type="text/javascript"></script>
+<script src="/js/ueditor/lang/zh-cn/zh-cn.js" type="text/javascript"></script>
+<!-- 删除弹出框 -->
+<link rel="stylesheet" href="/css/sweet/sweet-alert.css">
+<script src="/js/sweet/sweet-alert.min.js"></script>
+
+<link href="/css/bootstrapValidator.min.css" rel="stylesheet">
+<script src="/js/bootstrapValidator.min.js"></script>
+
+<link href="/css/select2.min.css" rel="stylesheet" />
+<script src="/js/select2.min.js"></script>
+
+
+
+<link rel="stylesheet" href="/css/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="/js/bootstrap-datetimepicker.zh-CN.js?version=1.0"></script>
+
+
+<script>
+    // 2017-10-09 hr.yuan 屏蔽报错代码
+    //$('.carousel').carousel();
+    $("input").focus(function () {
+        $(this).css("border", "1px solid #af1e20");
+        $(this).siblings('ul.dropdown-menu').show();
+    });
+    $("input").blur(function () {
+        $(this).css("border", "1px solid #c9c9c9");
+        $(this).siblings('ul.dropdown-menu').hide();
+    });
+</script>
+
+
+<script type="text/javascript">
+
+    $(function () {
+        $(document).attr("title",$(document).attr("title").replace(/<[^>]+>/g,""))
+    })
+
+    function preview(file){
+        var prevDiv = document.getElementById('preview');
+        if (file.files && file.files[0]){
+            var reader = new FileReader();
+            reader.onload = function(evt){
+                $('.preview').attr('src' , evt.target.result);
+            };
+            reader.readAsDataURL(file.files[0]);
+        }else{
+            $('.preview').attr('src' , file.value);
+        }
+    }
+</script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <title>Home</title>
+</head>
+<body>
+<!-- 头部引用信息 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    .dropdown-menu > li > a{
+        padding: 3px 1px;
+    }
+    .select2-container .select2-selection--single{
+        border: 1px solid #ddd;
+    }
+    /*新查询*/
+    .back_f2f2f2{background: #f2f2f2;}
+    .head_box_search{width: 1170px; height: 70px; margin: 0 auto; background: #f2f2f2;}
+    .search_newdiv{line-height: 70px;display: inline-block;}
+    .search_newdiv input{height: 28px;border: 1px solid #ddd;border-radius: 4px;vertical-align: middle;}
+    .search_newdiv input::-webkit-input-placeholder{position:relative;left:10px;color: #8e8186}
+     #select2-journalTitle-container{color: #8e8186;}
+    .aoisud .nusolx span{font-size: 14px;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+<script>
+    function adClick(id, url) {
+        $.ajax({
+            url: "/advertisement/click",
+            type: "POST",
+            data: {
+                "id": id
+            },
+            success: function (data) {
+            }
+        });
+        if (url != "") {
+            window.open(url);
+        }
+    }
+
+</script>
+
+<div class="back_fff">
+<div class="head_box">
+    
+    <input id='ipInfo' type="text" style="display: none" value="">
+    <h1><a href="/"><img src="/static/upgrade/img/logo_new.svg" alt="logo"/></a></h1>
+    <div class="chaolian">
+        <a href="/publications">Journals</a>
+        <a href="/books">Books</a>
+    </div>
+    
+    <div class="sign_box" style="padding-left:50px;;line-height: 80px;">
+    
+        
+        
+            <a href="#" onclick="loginRef();">Sign in</a>
+            <a href="/loginController/ParseToRegist">Register</a>
+        
+    
+    </div>
+    <div class="language" style="line-height: 80px;margin-top: 0px">
+        <img src="/img/gwc2.png" onclick="shopcar()" style="margin-right: 40px;max-width: 14px;max-height: 14px"/>
+        
+        
+            <p id="toumx">
+                <a href="#" onclick="changeVal('zh_CN');">中文</a></p>
+            
+        
+    </div>
+</div>
+
+</div>
+<!--20211125 查询栏-->
+<div class="back_f2f2f2">
+    <div class="head_box_search">
+    <form method="get" id="searchForm" action="/">
+         <div class="search_newdiv">
+            <input  value="" placeholder="Keywords"  id="queryField_a" type="text">
+
+            <input  value="" placeholder="Author name" id="fullName"  type="text">
+
+            <select id="journalTitle" style="width: 180px;color: #8e8186"></select>
+
+            <input style="width: 120px;" id="volume" value="" placeholder="Volume" type="text">
+
+            <input style="width: 120px;" id="issue" value="" placeholder="Issue" type="text">
+
+            <input style="width: 120px;" id="pageNumber" value="" placeholder="First page" type="text">
+
+             <div class="aoisud" style="vertical-align: middle;">
+                 <button class="nusolx" onclick="checkQueryInfo();" type="button"><span class="icon-search"></span></button>
+                 <a class="hebush" href="/search/selectSearch">Advanced Search</a>
+             </div>
+         </div>
+
+    </form>
+    </div>
+</div>
+
+    
+
+<script type="text/javascript">
+    $(function () {
+        $.ajaxSetup({cache: false});
+     });
+</script>
+
+<script type="text/javascript">
+
+    function cnpReload() {
+        window.location.reload(true);
+    }
+
+    //翻页方法
+	 function dividePage(val){
+		 if(val<0){
+			 return;
+		 }
+		 $("#curpage").val(val);
+		 $("form#searchForm").submit();
+	 }
+	 
+    //GO跳转
+	 function GO(tPage){
+		 var val = $("input#gotoPage").val();
+		 if(val && tPage && tPage >= val && val > 0){
+			$("#curpage").val(val-1);
+			$("form#searchForm").submit();
+		 }
+		 //cnpReload();
+		 return ; 
+	}
+    
+    //修改pageCount 10|20|50
+    function amendPageCount(pageCount){
+    	if(pageCount){
+    		$("#pageCount").val(pageCount);
+			$("form#searchForm").submit();		
+    	}
+    	return ; 
+    }
+
+</script>
+
+    <script type="text/javascript">
+        $(function(){
+            var storage = null;
+            $("#queryField_a").focus(function(){
+                enterSearch();
+            });
+
+            $("#fullName").focus(function(){
+                enterSearch();
+            });
+            $("#journalTitle").focus(function(){
+                enterSearch();
+            });
+            $("#volume").focus(function(){
+                enterSearch();
+            });
+            $("#issue").focus(function(){
+                enterSearch();
+            });
+            $("#pageNumber").focus(function(){
+                enterSearch();
+            });
+            //出版物
+            $.ajax({
+                type:"post",
+                url : "/search/title",
+                dataType:"json",
+                contentType:"application/json",
+                success:function(data){
+                    var html = '<option value="">Journal/Book title</option> ';
+                    for(var i=0;i<data.length;i++){
+                        html += '<option value="'+data[i].id+'" data-type="'+data[i].searchType+'">'+data[i].title+'</option>';
+                    }
+                    $("#journalTitle").html(html);
+                    $("#journalTitle").select2();
+                },
+                error:function(data){
+
+                }
+            });
+            //隐藏用户ip数据
+            $.ajax({
+                type: "post",
+                url: "/doi/getIpInfo",
+                dataType: "json",
+                contentType: "application/json",
+                success: function (data) {
+                    if (data[0].ipInfo != null && data[0].ipInfo != '10.0.0.28') {
+                        $("#ipInfo").val(data[0].ipInfo);
+                        //存储ip数据到localstorage
+                        storage = window.localStorage;
+                        storage.setItem("ipInfo", $("#ipInfo").val());
+                    } else {
+                        getRealIp();
+                    }
+                },
+            });
+        });
+
+        //通过第三方服务获取ip
+        function getRealIp() {
+            $.ajax({
+                method: "GET",
+                url: "http://pv.sohu.com/cityjson?ie=utf-8",
+                dataType: "script",
+            }).done(function () {
+                if (returnCitySN.cip != null && returnCitySN.cip != '') {
+                    $("#ipInfo").val(returnCitySN.cip);
+                    //存储ip数据到localstorage
+                    storage = window.localStorage;
+                    storage.setItem("ipInfo", $("#ipInfo").val());
+                }
+            });
+        }
+
+        //按回车进行搜索
+        function enterSearch(){
+            document.onkeyup = function (e) {
+                if (window.event)//如果window.event对象存在，就以此事件对象为准
+                    e = window.event;
+                var code = e.charCode || e.keyCode;
+                if (code == 13) {
+                    //此处编写用户敲回车后的代码
+                    checkQueryInfo();
+                }
+            }
+        }
+        function checkQueryInfo() {
+            var queryField_a = $("#queryField_a").val().trim();//综合查询
+            var fullName = $("#fullName").val().trim();//作者
+            var journalTitle = $("#journalTitle").val().trim();//刊  出版物
+            var volume = $("#volume").val().trim();//卷
+            var issue = $("#issue").val().trim();//期
+            var pageNumber = $("#pageNumber").val().trim();//页码
+            $("#themeSearch").val("");
+            if ((queryField_a == "" || queryField_a == null)
+                && (fullName == "" || fullName == null)
+                && (journalTitle == "" || journalTitle == null)
+                && (volume == "" || volume == null)
+                && (issue == "" || issue == null)
+                && (pageNumber == "" || pageNumber == null)) {
+            } else {
+                //参数不为空 给input添加name属性值
+                if(queryField_a){
+                    $("#queryField_a").attr("name","queryField_a");
+                }
+                if(fullName){
+                    $("#fullName").attr("name","fullName");
+                }
+                if(journalTitle){
+                    var dataType = $("#journalTitle option:selected").attr("data-type");
+                    if(2==dataType){
+                        $("#journalTitle").attr("name","jouranlId");
+                    }
+                    if(3==dataType){
+                        $("#journalTitle").attr("name","bookId");
+                    }
+                }
+                if(volume){
+                    $("#volume").attr("name","volume");
+                }
+                if(issue){
+                    $("#issue").attr("name","issue");
+                }
+                if(pageNumber){
+                    $("#pageNumber").attr("name","pageNumber");
+                }
+                document.getElementById("searchForm").action="/search/search";
+                document.getElementById("searchForm").submit();
+            }
+        }
+
+        function changeVal(lang){
+            $.ajax({
+                type : "POST",
+                url : "/common/language",
+                data : {
+                    language : lang,
+                    r_ : new Date().getTime()
+                },
+                success : function(data) {
+                    // 刷新页面
+                    window.location.reload(true);
+                },
+                error : function(data) {
+                    art.dialog.tips(data, 1, 'error');
+                }
+            });
+        }
+        function loginRef() {
+            var ref=window.location.href;
+            var pos=ref.indexOf("?ref=");
+            if (pos > 0){
+                ref=ref.substring(0,pos);
+            }
+            if(ref.indexOf("/loginController/ParseToLogin") > 0){
+                ref="";
+            }
+            window.location.href="/loginController/ParseToLogin?ref="+ref;
+        }
+
+        function loginOutRef() {
+            var ref=window.location.href;
+            window.location.href="/out?ref="+ref;
+        }
+
+
+        function shopcar() {
+            window.location.href="/cart/toIns";
+        }
+    </script>
+
+<div class="container content">
+
+
+
+<div class="row">
+    <a id="" href="">Home</a>
+    <div><span id="platformDescription" class="sciEngine"></span></div>
+	
+</div>
+<div class="row con">
+    <div class="col-xs-9 conL">
+        <div class="row" id="indexNews"></div>
+        
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="col-xs-6" id="newResource"></div>
+            <div class="col-xs-6">
+                <div class="row" id="mostRead"></div>
+                <div class="row" id="mostCited"></div>ae
+            </div>
+        </div>
+		<div class="row">
+			<div class="col-xs-12 recR" id="featuredJournals"></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 recR" id="featuredBooks"></div>
+		</div>
+        <form action="/search/search" id="theme" method="get">
+            <div class="row">
+                <div class="col-xs-12 recR">
+                    <h4 class="bt2"><span>Topics</span></h4>
+                    <ul class="list-unstyled myList myList2">
+                        <!-- href="javascript:themeFilterQuery('');" -->
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('组合论','Combinatorics');">Combinatorics</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('数论','Number Theory');">Number Theory</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('代数几何','Algebraic Geometry');">Algebraic Geometry</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('无机化学','Inorganic Chemistry');">Inorganic Chemistry</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('有机化学','Organic Chemistry');">Organic Chemistry</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('物理化学','Physical Chemistry');">Physical Chemistry</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('植物学','Botany');">Botany</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('动物学','Zoology');">Zoology</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('微生物学','Microbiology');">Microbiology</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('地质学','Geology');">Geology</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('大气科学','Atmospheric science');">Atmospheric science</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('海洋科学','Oceanology');">Oceanology</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('材料科学与工程','Materials Science and Engineering');">Materials Science and Engineering</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('机械工程','Mechanical Engineering');">Mechanical Engineering</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('航空、航天科学技术','Aviation & Aerospace');">Aviation & Aerospace</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('智能控制','Intelligent Control');">Intelligent Control</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('计算机科学与技术','Computer Science & Technology');">Computer Science & Technology</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('计算机图形与图像','Computer Graphics');">Computer Graphics</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('量子物理','Quantum Physics');">Quantum Physics</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('固体力学','Solid Mechanics');">Solid Mechanics</a></li>
+                        <li class="col-xs-3"><a href="javascript:themeFilterQuery('凝聚态物理学','Condensed Matter Physics');">Condensed Matter Physics</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <input type="hidden" name="filterThemeFilter"  id="filterThemeFilter"/>
+            <input type="hidden" name="themeSearch" value="themeSearch">
+        </form>
+        <!-- 最近浏览和最近搜索 -->
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<div class="row">
+   
+    
+</div>
+</body>
+</html>
+    </div>
+
+    <!-- 右侧信息 -->
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<div class="col-md-3 col-xs-12 conR">
+
+    <!-- 首页广告 -->
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<div class="right-item">
+    <div class="acenter" id="submission" onmouseover="changeinimg();" onmouseout="changeoutimg();">
+        
+            
+            
+                <a href="#"  style="display:block;color: inherit" data-toggle="modal" data-target="#myModal">
+                    Submission and review
+                    <img style="margin-bottom: 5px;" src="/images/icon3.png" >
+                </>
+                </a>
+            
+        
+    </div>
+    <a href="/user_settings/my_watch#attIssues" class="advanceBtn" style="display:block;color: inherit">
+        <h5 class="bt3">Sign up for alerts&nbsp;<img
+                src="/images/alerts.png" width="16px;" height="16px;"/></h5>
+    </a>
+
+    <h5 class="bt3">
+	    Online Advertising
+        <a href="/advert"><img src="/images/wai.png" alt="" class="vm"></a>
+        
+    </h5>
+    <ul class="list-unstyled myList3" default-index>
+    	
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </ul>
+</div>
+</body>
+<script  type="application/javascript">
+    function changeinimg(){
+        $("#submission img").attr("src","/images/icon2.png");
+    }
+    function changeoutimg() {
+        $("#submission img").attr("src","/images/icon3.png");
+    }
+</script>
+</html>
+    <!-- 资源统计 -->
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    /*$(function($) {
+        $.ajax({
+            type: "get",
+            url: "/resource/count",
+            success: function(data){
+                $("#journalCount").html(data.journalCount);
+                $("#bookCount").html(data.bookCount);
+                $("#totalCount").html(data.total);
+            }
+        });
+    });*/
+
+</script>
+</html>
+</div>
+</body>
+</html>
+</div>
+<script type="text/javascript">
+    //主题查询
+    function themeFilterQuery(themeNameCh, themeNameEn) {
+        //主题
+        $('#filterThemeFilter').val(themeNameCh + "####" + themeNameEn);
+        $("#filterThemeFilter").attr("name", "filterThemeFilter");
+        // 设置为第一页
+        $("#curpage").val(0);
+        $("#theme").submit();
+    }
+    $(function () {
+    	// 轮转图
+    	$('.owl-carousel').owlCarousel({
+    		loop: true,
+    		margin: 10,
+    		responsiveClass: true,
+    		responsive: {
+    			0: {
+    				items: 2,
+    				nav: true,
+    				dots: false,
+    				navText: ['', '']
+    			},
+    			640: {
+    				items: 2,
+    				nav: true,
+    				dots: false,
+    				navText: ['', '']
+    			},
+    			960: {
+    				items: 4,
+    				nav: true,
+    				dots: false,
+    				navText: ['', '']
+    			}
+
+    		}
+    	});
+    	$(function(){
+    	    $("[rel=drevil]").popover({
+    	        trigger:'manual',
+    	        placement : 'bottom',
+    	        html: 'true',
+    	        animation: false
+    	    }).on("mouseenter", function () {
+    	        var _this = this;
+    	        $(this).popover("show");
+    	        $(this).siblings(".popover").on("mouseleave", function () {
+    	            $(_this).popover('hide');
+    	        });
+    	    }).on("mouseleave", function () {
+    	        var _this = this;
+    	        setTimeout(function () {
+    	            if (!$(".popover:hover").length) {
+    	                $(_this).popover("hide")
+    	            }
+    	        });
+    	    });
+    	});
+        //最新资源
+        $.ajax({
+            async: false,
+            type: "POST",
+            url: "/getNewResource",
+            data: {},
+            success: function (data) {
+                $("#newResource").html(data);
+            }
+        });
+        //热读文章
+        $.ajax({
+            async: false,
+            type: "POST",
+            url: "/getMostRead",
+            data: {"start": 0, "end": 4},
+            success: function (data) {
+                $("#mostRead").html(data);
+            }
+        });
+        //最多引用
+        $.ajax({
+            async: false,
+            type: "POST",
+            url: "/getMostCited",
+            data: {"start": 0, "end": 4},
+            success: function (data) {
+                $("#mostCited").html(data);
+            }
+        });
+        //特色期刊
+        $.ajax({
+            async: false,
+            type: "POST",
+            url: "/getfeaturedJournals",
+            success: function (data) {
+                $("#featuredJournals").html(data);
+            }
+        });
+      	//特色图书
+        $.ajax({
+            async: false,
+            type: "POST",
+            url: "/getfeaturedBooks",
+            success: function (data) {
+                $("#featuredBooks").html(data);
+            }
+        });
+
+    });
+</script>
+</div>
+<!-- 底部信息 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+<!-- ueditor编辑器 -->
+<script src="/js/ueditor/ueditor.config.js?version=0.3" type="text/javascript"></script>
+<script src="/js/ueditor/ueditor.all.min.js?version=0.1" type="text/javascript"></script>
+<script src="/js/ueditor/lang/zh-cn/zh-cn.js" type="text/javascript"></script>
+<script src="/js/ueditor/dialogs/customDialog/customDialog.js" type="text/javascript"></script>
+<body>
+<!--新增备案信息修改 直接存入redis，不做入库-->
+<div class="tali_box" style="float: left;">
+    <!--隐藏一个黑名单链接-->
+    <div style="display: none">
+        <a href="/queryAAA">qqqq</a>
+    </div>
+    <div>
+        <div>
+            <p>
+                <a href="javascript:void(0);" onclick="openContactModel()">Contact and support</a>
+            </p>
+        </div>
+        <div style="display: inline-block;">
+            <p id="companyInfoCh"></p>
+            <p id="companyInfoEn"></p>
+        </div>
+        <div style="display: inline-block;">
+            
+        </div>
+        <p id="registerInfos"></p>
+    </div>
+</div>
+
+<div class="modal fade" id="myFooterEditModal" tabindex="-1" role="dialog" aria-labelledby="myFooterModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width: 750px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×</button>
+                <h4 id="title" class="modal-title"></h4>
+            </div>
+            <form id="updateFooterForm" method="post" action="/publishers/submitFooterInfo" novalidate="novalidate" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <!-- 公司信息英文 -->
+                    <div class="form-group">
+                        <label class="control-label">Company Info</label>
+                        <input type="text" autocomplete="off" id="CompanyEnName" name="CompanyEnName" class="form-control">
+                    </div>
+                    <!-- 公司信息中文 -->
+                    <div class="form-group">
+                        <label class="control-label">Chinese Company Info</label>
+                        <input type="text" autocomplete="off" id="CompanyChName" name="CompanyChName" class="form-control">
+                    </div>
+                    <!-- ICP备案 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Integrated Info
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group" id="IntegratedInfoDiv">
+                                <script id="IntegratedInfo" name="IntegratedInfo" type="text/plain" style="width:680px;"></script>
+                            </div>
+                        </div>
+                    </div>
+                    <!--联网备案信息-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Register System Info
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group" id="RegisterSystemInfoDiv">
+                                <script id="RegisterSystemInfo" name="RegisterSystemInfo" type="text/plain" style="width:680px;"></script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="footer-submit-button" type="button"  class="btn btn-default">
+                        Update
+                    </button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<div class="modal fade" id="myContactModal" tabindex="-1" role="dialog" aria-labelledby="myContactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width: 750px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×</button>
+                <h4 id="contactTitle" class="modal-title"></h4>
+            </div>
+            <form id="updateContactForm" method="post" action="/publishers/submitContactInfo" novalidate="novalidate" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <p>
+                    <h4>Email us</h4>
+                    </p><br>
+                    <p><span style="color: red; ">*</span>is must be filled in</p>
+                    <br>
+                    <div class="form-group">
+                        <label class="control-label">Your role<span style="color: red;">*</span></label>
+                        &nbsp;
+                        <input type="radio" name="role" id="admin" value="1">Administrator&nbsp;&nbsp;
+                        <input type="radio" name="role" id="userId" value="2" checked>User
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Journal name<span style="color: red; ">*</span></label>
+                        <input type="text" autocomplete="off" id="JournalName" name="JournalName" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Your question<span
+                                style="color: red; ">*</span></label>
+                        <textarea placeholder="" rows="4" name="questionInfos" id="questionInfos"
+                                  class="form-control"></textarea>
+                    </div>
+
+                    <!-- 上传附件 -->
+                    <div class="form-group">
+                        <label class="control-label">
+                            Upload attachment</label><br>
+                            <span style="font-size: 12px">The file size should not exceed 20MB</span>
+                            <span id="attachment"></span>
+                        </label>
+                        <div class="row">
+                            <input type="file" style="padding-left:2%" id="filePath" name="filePath" onchange="checkFile(this)"/>
+                            <input type="hidden" name="pathFileHidden" id="pathFileHidden"/>
+                            <div id="removeFile" style="padding-left: 2%;display: none" onclick="cleanFile(this);">
+                                <a href="javascript:void(0);"><span class="glyphicon glyphicon-remove"></span>
+                                    Remove</a>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <!--联系方式-->
+                    <p>
+                    <h4>Your contact information</h4>
+                    </p><br><br>
+                    <div class="form-group">
+                        <label class="control-label">Title</label>
+                        <select name="gender" id="gender"  class="form-control">
+                            
+                                <option value='1'>Mr</option>
+                                <option value='2'>Mrs</option>
+                            
+                            
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">First name<span style="color: red; ">*</span></label>
+                        <input type="text" autocomplete="off" id="surname" name="surname" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Last name<span style="color: red; ">*</span></label>
+                        <input type="text" autocomplete="off" id="lastname" name="lastname" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Email<span style="color: red; ">*</span></label>
+                        <input type="text" autocomplete="off" id="email" name="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Confirm Email address<span style="color: red; ">*</span></label>
+                        <input type="text" autocomplete="off" id="comfirmEmail" name="comfirmEmail" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Phone</label>
+                        <input type="text" autocomplete="off" id="phone" name="phone" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="contact-submit-button" type="button" class="btn btn-default">
+                        Submit
+                    </button>
+                    <button id="cancel-submit-button" type="button" class="btn btn-default" aria-hidden="true" data-dismiss="modal">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<script type="text/javascript">
+    var lang='en_US';
+    //初始化富文本编辑器
+    UE.delEditor('IntegratedInfo');
+    UE.delEditor('RegisterSystemInfo');
+    var IntegratedInfo= UE.getEditor('IntegratedInfo',{
+        //initialFrameWidth :680,//设置编辑器宽度
+        initialFrameHeight:100,//设置编辑器高度
+        scaleEnabled:true//设置不自动调整高度
+        //scaleEnabled {Boolean} [默认值：false]//是否可以拉伸长高，(设置true开启时，自动长高失效)
+    });
+    var RegisterSystemInfo= UE.getEditor('RegisterSystemInfo',{
+        //initialFrameWidth :680,//设置编辑器宽度
+        initialFrameHeight:100,//设置编辑器高度
+        scaleEnabled:true//设置不自动调整高度
+        //scaleEnabled {Boolean} [默认值：false]//是否可以拉伸长高，(设置true开启时，自动长高失效)
+    });
+
+    $(function () {
+        //Modal可见时触发
+        $('#myFooterEditModal').on('shown.bs.modal', function() {
+            footerFormValidator();
+        });
+        //Modal验证销毁重构
+        $('#myFooterEditModal').on('hidden.bs.modal', function() {
+            if($("#updateFooterForm").data('bootstrapValidator')!=undefined&&$("#updateFooterForm").data('bootstrapValidator')!=null){
+                $("#updateFooterForm").data('bootstrapValidator').destroy();
+                $('#updateFooterForm').data('bootstrapValidator',null);
+            }
+        });
+        getFooterInfo();
+    });
+    $("#footer-submit-button").on("click", function(){
+        $("#updateFooterForm").data("bootstrapValidator").validate();
+        if(!$("#updateFooterForm").data("bootstrapValidator").isValid()){
+            return ;
+        }
+        document.getElementById("updateFooterForm").submit();
+    });
+    function footerFormValidator() {
+        $("#updateFooterForm").bootstrapValidator({
+            feedbackIcons: { //根据验证结果显示的各种图标
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },fields: {
+                CompanyEnName: {
+                    validators: {
+                        notEmpty: {
+                            message: 'You must enter'
+                        }
+                    }
+                },
+                CompanyChName: {
+                    validators: {
+                        notEmpty: {
+                            message: 'You must enter'
+                        }
+                    }
+                },
+            }
+        });
+    }
+
+    function getFooterInfo() {
+        var lang = 'en_US';
+        $.ajax({
+            type: "POST",
+            url: "/publishers/getFooterInfo",
+            success: function (data) {
+                $('#companyInfoCh').text(data.companyInfoCh);
+                $('#companyInfoEn').text(data.companyInfoEn);
+                if (lang == 'zh_CN') {
+                    //隐藏英文
+                    $('#companyInfoEn').css("display", "none");
+                } else {
+                    $('#companyInfoCh').css("display", "none");
+                }
+                var info = data.integratedInfo + data.registerSystemInfo;
+                $('#registerInfos').html(info);
+                //去除p标签
+                info = $($('#registerInfos').find("p")[0]).html() + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + $($('#registerInfos').find("p")[1]).html();
+                $('#registerInfos').html(info);
+            },
+            error: function (message) {
+                //swal(getTipData(1), "","error");
+            }
+        });
+    }
+
+    function openFooterModel() {
+        //填充数据到编辑按钮
+        $("#myFooterEditModal").modal("show");
+        $.ajax({
+            type: "POST",
+            url: "/publishers/getFooterInfo",
+            success: function (data) {
+                $('#CompanyChName').val(data.companyInfoCh);
+                $('#CompanyEnName').val(data.companyInfoEn);
+                IntegratedInfo.setContent("");
+                RegisterSystemInfo.setContent("");
+                IntegratedInfo.setContent(data.integratedInfo);
+                RegisterSystemInfo.setContent(data.registerSystemInfo);
+            },
+            error: function (message) {
+                //swal(getTipData(1), "","error");
+            }
+        });
+    }
+
+    function checkFile(file) {
+        if (file.files && file.files[0]) {
+            if (file.files[0].size > 20971520) {
+                swal('The file size should not exceed 20MB');
+            } else {
+                $("#removeFile").show();
+            }
+        }
+    }
+
+    function cleanFile(obj){
+        //清空隐藏域
+        $(obj).parent().find("input[type='hidden']").val("");
+        //清空开始
+        var file = $(obj).parent().find("input[type='file']");
+        file.after(file.clone().val(""));
+        file.remove();
+        //清空结束
+        $(obj).hide();
+    }
+
+    function openContactModel() {
+        $("#myContactModal").modal("show");
+    }
+
+    $("#contact-submit-button").on("click", function(){
+        //校验数据
+        var file = document.getElementById("filePath").files[0];
+        if (file != undefined && file.size > 20971520){
+            swal('The file size should not exceed 20MB');
+            return;
+        }
+        var journalName = $("#JournalName").val();
+        if (journalName == ''){
+            swal('journal name can not empty');
+            return;
+        }
+        var question = $("#questionInfos").val();
+        if (question == ''){
+            swal('question can not empty');
+            return;
+        }
+        var surname = $("#surname").val();
+        if (surname == ''){
+            swal('surname can not empty');
+            return;
+        }
+        var lastname = $("#lastname").val();
+        if (lastname == ''){
+            swal('lastname can not empty');
+            return;
+        }
+        var email = $("#email").val();
+        if (email == ''){
+            swal('email can not empty');
+            return;
+        }
+        var comfirmEmail = $("#comfirmEmail").val();
+        if (comfirmEmail == ''){
+            swal('comfirm email can not empty');
+            return;
+        }
+        if (email != comfirmEmail) {
+            swal('The email address is different');
+            return;
+        }
+        if (!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)) {
+            swal('The email format is incorrect');
+            return;
+        }
+        document.getElementById("updateContactForm").submit();
+        swal('Saved', "", "success")
+
+    });
+
+    $("#cancel-submit-button").on("click", function(){
+        $('#updateContactForm')[0].reset();
+    });
+
+</script>
+</body>
+</html>
+
+</body>
+
+<!-- 修改平台描述 -->
+<div class="modal fade" id="description" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">×</button>
+				<h4 class="modal-title">Update</h4>
+			</div>
+			<form id="updateDescriptionForm" method="post" action="" novalidate="novalidate" enctype="multipart/form-data">
+				<div class="modal-body">
+					<!-- 描述 -->
+					<div class="panel-body">
+						<div class="form-group" id ="TitleEdit" style="display:none">
+							<label class="control-label">Platform title</label>
+							<input type="text" autocomplete="off" id="platformTitleEdit" name="platformTitleEdit" class="form-control">
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label">Platform chinese description</label>
+							<script id="platformDescriptionEdit" name="platformDescriptionEdit" type="text/plain" style="width:680px;"></script>
+                        </div>
+
+                        
+                        <div; class="form-group"; id ="TitleEditz"; style="display:none">
+                            <label; class="control-label">Platform title</label>
+                            <input; type="text"; autocomplete="off"; id="platformTitleEditEh"; name="platformTitleEditEh"; class="form-control">
+                            </div>
+
+                            <div; class="form-group">
+                            <label; class="control-label">Platform english description</label>
+                            <script; id="platformDescriptionEditEh"; name="platformDescriptionEditEh"; type="text/plain"; style="width:680px;"></script>
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<button type="button" onclick="updateDesc()" data-dismiss="modal" class="btn btn-default">
+								Update
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+	<script  type="text/javascript">
+
+        //初始化富文本编辑器
+        UE.delEditor('platformDescriptionEdit');
+        var platformDescriptionEdit = UE.getEditor('platformDescriptionEdit', {
+            initialFrameWidth: 750,//设置编辑器宽度
+            initialFrameHeight: 100,//设置编辑器高度
+            scaleEnabled: true//设置不自动调整高度
+            //scaleEnabled {Boolean} [默认值：false]//是否可以拉伸长高，(设置true开启时，自动长高失效)
+        });
+
+        //初始化富文本编辑器
+        UE.delEditor('platformDescriptionEditEh');
+        var platformDescriptionEditEh = UE.getEditor('platformDescriptionEditEh', {
+            initialFrameWidth: 750,//设置编辑器宽度
+            initialFrameHeight: 100,//设置编辑器高度
+            scaleEnabled: true//设置不自动调整高度
+            //scaleEnabled {Boolean} [默认值：false]//是否可以拉伸长高，(设置true开启时，自动长高失效)
+        });
+
+    	//平台描述
+        $.ajax({
+            async: false,
+            type: "POST",
+            url: "/getDescription",
+            data: {"start": 0, "end": 0},
+            success: function (data) {
+				if(data !="" && data !=null){
+                    $("#platformTitle").html(data[0].platformTitleEdit);
+                    $("#platformDescription").html(data[0].platformDescriptionEdit);
+				}
+
+            }
+        });
+        //首页新闻
+        $.ajax({
+            async: false,
+            type: "POST",
+            url: "/getIndexNews",
+            data: {"start": 0, "end": 2},
+            success: function (data) {
+                $("#indexNews").html(data);
+            }
+        });
+    
+   //回显描述中文
+    function selectDescription() {
+        $.ajax({
+            async: false,
+            type: "POST",
+            url: "/getDescriptionCh",
+            data: {"start": 0, "end": 0},
+            success: function (data) {
+                $("#platformTitleEdit").val(data[0].platformTitleEdit);
+                platformDescriptionEdit.setContent(data[0].platformDescriptionEdit);
+            }
+        });
+        selectDescriptionz();
+   }
+
+		function  selectDescriptionz(){
+			$.ajax({
+				async: false,
+				type: "POST",
+				url: "/getDescriptionEn",
+				data: {"start": 0, "end": 0},
+				success: function (data) {
+                    $("#platformTitleEditEh").val(data[0].platformTitleEdit);
+                    platformDescriptionEditEh.setContent(data[0].platformDescriptionEdit);
+				}
+			});
+		}
+
+		//更新
+		function updateDesc() {
+            updateDescription();
+            updateDescriptionen();
+		}
+		/*修改中文描述*/
+		function  updateDescription(){
+			var platformTitleEdit= $("#platformTitleEdit").val();
+         	var DescriptionEdit = platformDescriptionEdit.getContent();
+            $.ajax({
+                url: "/updateDescriptionzh",
+                type: "POST",
+                async: false,
+                data: {
+					 	"platformTitleEdit":platformTitleEdit,
+						"platformDescriptionEdit":DescriptionEdit
+						},
+                success: function (data) {
+
+                }
+            });
+		}
+		/*修改英文描述*/
+		function  updateDescriptionen(){
+			var platformTitleEdit= $("#platformTitleEditEh").val();
+			var DescriptionEdit = platformDescriptionEditEh.getContent();
+			$.ajax({
+				url: "/updateDescriptionen",
+				type: "POST",
+				async: false,
+				data: {
+					"platformTitleEdit":platformTitleEdit,
+					"platformDescriptionEdit":DescriptionEdit
+				},
+				success: function (data) {
+                    window.location.reload(true);
+				}
+			});
+		}
+
+</script>
+</html>
